@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.epam.com/gems"
+        xmlns:tns="http://www.epam.com/gems"
+        elementFormDefault="qualified">
+
+    <element name="Gems" type="tns:Gems"/>
+
+    <element name="Gem" type="tns:Gem" abstract="true"/>
+    <element name="SyntheticGem" type="tns:SyntheticGem" substitutionGroup="tns:Gem"/>
+    <element name="NaturalGem" type="tns:NaturalGem" substitutionGroup="tns:Gem"/>
+
+    <complexType name="Gems">
+        <sequence>
+            <element ref="tns:Gem" minOccurs="2" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+ <complexType name="Gem">
+ <sequence>
+    <element name="name" type="string" />
+    <element name="value" type="double"/>
+    <element name="visualParameters" type="tns:VisualParameters"/>
+ </sequence>
+ <attribute name="id" type="ID" use="required" />
+ <attribute name="hallmark" type= "positiveInteger" use="optional"/>
+ </complexType>
+
+ <complexType name="VisualParameters">
+    <sequence>
+        <element name="colour" type="string"/>
+        <element name="transparency" type="tns:Transparency"/>
+        <element name="typeOfCut" type="tns:TypeOfCut" />
+    </sequence>
+ </complexType>
+
+ <simpleType name="Transparency">
+    <restriction base="string">
+        <enumeration value="high">
+        </enumeration>
+        <enumeration value="medium">
+        </enumeration>
+        <enumeration value="low">
+        </enumeration>
+    </restriction>
+ </simpleType>
+
+ <simpleType name="TypeOfCut">
+    <restriction base="positiveInteger">
+       <minInclusive value="2"/>
+       <maxInclusive value="17"/>
+    </restriction>
+ </simpleType>
+
+
+ <complexType name="NaturalGem">
+    <complexContent>
+        <extension base="tns:Gem">
+            <sequence>
+               <element name="origin" type="string"/>
+            </sequence>
+        </extension>
+    </complexContent>
+ </complexType>
+
+  <complexType name="SyntheticGem">
+    <complexContent>
+        <extension base="tns:Gem">
+          <sequence>
+               <element name="manufacturer" type="string"/>
+          </sequence>
+        </extension>
+    </complexContent>
+ </complexType>
+
+  </schema>
