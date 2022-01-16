@@ -2,17 +2,21 @@ package com.epam.init;
 
 public class Gem {
     private String id;
+    private Integer hallmark = 0;
+
     private String name;
     private VisualParametrs visualParametrs ;
 
-    public Gem(String id, String name, VisualParametrs visualParametrs) {
+    public Gem(String id,Integer hallmark ) {
         this.id = id;
-        this.name = name;
-        this.visualParametrs = visualParametrs;
+        this.hallmark = hallmark;
     }
 
     public String getId() {
         return id;
+    }
+    public Integer getHallmark() {
+        return hallmark;
     }
 
     public String getName() {
@@ -21,6 +25,22 @@ public class Gem {
 
     public VisualParametrs getVisualParametrs() {
         return visualParametrs;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setHallmark(Integer hallmark) {
+        this.hallmark = hallmark;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+   
+    public void setVisualParametrs(VisualParametrs visualParametrs) {
+        this.visualParametrs = visualParametrs;
     }
     
 }

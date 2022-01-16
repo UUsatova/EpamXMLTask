@@ -1,19 +1,19 @@
 package com.epam.init;
 
 public enum CommonGemEnum {
-    GEM("Gem"),
+    GEM("Gem"),                  //
     
-    NAME("name"),
-    VALUE("value"),
-    VISUAL_PARAMETRS("visualParameters"),
-    COLOUR("colour"),
+    NAME("name"),//
+    VALUE("value"),//
+    VISUAL_PARAMETRS("visualParameters"),  //
+    COLOUR("colour"),//
     TRANSPARENCY("transparency"),
-    TYPE_OF_CUT("typeOfCut"),
+    TYPE_OF_CUT("typeOfCut"),//
 
-    NATURAL_GEM("NaturalGem"),
+    NATURAL_GEM("NaturalGem"),         //
     ORIGIN("origin"),
 
-    SYNTHETIC_GEM("SyntheticGem"),
+    SYNTHETIC_GEM("SyntheticGem"),       //
     MANUFACTURER("manufacturer");
 
     private final String valueString;

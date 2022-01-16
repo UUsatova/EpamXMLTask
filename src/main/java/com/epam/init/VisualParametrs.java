@@ -11,6 +11,10 @@ public class VisualParametrs {
         this.transparency = transparency;
         this.typeOfCut = typeOfCut;
     }
+
+    public VisualParametrs(){
+        
+    }
     
     public String getColour() {
         return colour;
@@ -22,6 +26,17 @@ public class VisualParametrs {
     
     public Integer getTypeOfCut() {
         return typeOfCut;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public void setTransparency(Transparency transparency) {
+        this.transparency = transparency;
+    }
+    public void setTypeOfCut(Integer typeOfCut) {
+        this.typeOfCut = typeOfCut;
     }
     
 }
