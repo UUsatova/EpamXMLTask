@@ -6,11 +6,13 @@ public class Gem {
 
     private String name;
     private VisualParametrs visualParametrs ;
+    private Float value;
 
     public Gem(String id,Integer hallmark ) {
         this.id = id;
         this.hallmark = hallmark;
     }
+
 
     public String getId() {
         return id;
@@ -41,6 +43,14 @@ public class Gem {
    
     public void setVisualParametrs(VisualParametrs visualParametrs) {
         this.visualParametrs = visualParametrs;
+    }
+
+    public void setValue(Float value) {
+        this.value = value;
+    }
+
+    public Float getValue() {
+        return value;
     }
     
 }

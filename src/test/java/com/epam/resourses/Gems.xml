@@ -3,46 +3,46 @@
       xmlns="http://www.epam.com/gems"
       xsi:schemaLocation="http://www.epam.com/gems gems.xsd">
     <NaturalGem id="id-1t67" hallmark="123">
-        <name></name>
+        <name>gem1</name>
         <value>34.4</value>
         <visualParameters>
-            <colour></colour>
+            <colour>blue</colour>
             <transparency>low</transparency>
             <typeOfCut>6</typeOfCut>
-            </visualParameters>
-        <origin></origin>
+        </visualParameters>
+        <origin>veryogigin</origin>
     </NaturalGem>
     <NaturalGem id="id-87" hallmark="123">
-        <name></name>
+        <name>goop</name>
         <value>34.4</value>
         <visualParameters>
-            <colour></colour>
+            <colour>red</colour>
             <transparency>low</transparency>
             <typeOfCut>6</typeOfCut>
-            </visualParameters>
-        <origin></origin>
+        </visualParameters>
+        <origin>poool</origin>
     </NaturalGem>
 
     <NaturalGem id="id-2888">
-        <name></name>
+        <name>dobre</name>
         <value>56.6</value>
         <visualParameters>
-            <colour></colour>
+            <colour>float</colour>
             <transparency>high</transparency>
             <typeOfCut>7</typeOfCut>
             </visualParameters>
-        <origin></origin>
+        <origin>hoop</origin>
     </NaturalGem>
 
     <SyntheticGem id="id-k3">
-        <name></name>
+        <name>hhhhhhh</name>
         <value>78.8</value>
         <visualParameters>
-            <colour></colour>
+            <colour>goopy</colour>
             <transparency>high</transparency>
             <typeOfCut>7</typeOfCut>
             </visualParameters>
-        <manufacturer></manufacturer>
+        <manufacturer>perdak</manufacturer>
     </SyntheticGem>
 
 </Gems>

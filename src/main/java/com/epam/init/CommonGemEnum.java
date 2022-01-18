@@ -7,14 +7,14 @@ public enum CommonGemEnum {
     VALUE("value"),//
     VISUAL_PARAMETRS("visualParameters"),  //
     COLOUR("colour"),//
-    TRANSPARENCY("transparency"),
+    TRANSPARENCY("transparency"), // 
     TYPE_OF_CUT("typeOfCut"),//
 
     NATURAL_GEM("NaturalGem"),         //
-    ORIGIN("origin"),
+    ORIGIN("origin"), //
 
     SYNTHETIC_GEM("SyntheticGem"),       //
-    MANUFACTURER("manufacturer");
+    MANUFACTURER("manufacturer"); //
 
     private final String valueString;
     private CommonGemEnum(String valueString){
