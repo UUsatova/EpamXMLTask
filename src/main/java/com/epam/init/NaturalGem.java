@@ -20,9 +20,10 @@ public class NaturalGem extends Gem {
 
     @Override
     public String toString() {
-       String str = "NaturalGem {\n" + this.getId() +"\n" + this.getName() + "\n" + this.getOrigin()  +"\n"
-        + this.getHallmark() +"\n" + this.getValue() +"\n" + this.getVisualParametrs().getColour()  +"\n"+ this.getVisualParametrs().getTypeOfCut()  +"\n"+ this.getVisualParametrs().getTransparency()  +"\n}";
-        return super.toString();
+        StringBuilder gemString = new StringBuilder(super.toString());
+        gemString.setLength(gemString.length() - 1);
+        gemString.append("Origin: ").append(getOrigin()).append("\n}");
+       return gemString.toString();
     }
     
 }

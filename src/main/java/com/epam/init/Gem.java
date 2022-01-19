@@ -52,5 +52,22 @@ public class Gem {
     public Float getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder gemString = new StringBuilder();
+        gemString.append(this.getClass().getSimpleName() );
+        gemString.append("{\n" );
+        gemString.append("ID: ").append(getId() ).append("\n" );
+        gemString.append("Name: ").append(getName() ).append("\n" );
+        gemString.append("Hallmark: ").append(getHallmark()).append("\n" );
+        gemString.append("Value: ").append(getValue() ).append("\n" );
+        gemString.append("Color: ").append(getVisualParametrs().getColour() ).append("\n" );
+        gemString.append("Transparency: ").append(getVisualParametrs().getTransparency().getValue() ).append("\n" );
+        gemString.append("TypeOfCut: ").append(getVisualParametrs().getTypeOfCut() );
+        gemString.append("\n}" );
+
+        return gemString.toString();
+    }
     
 }

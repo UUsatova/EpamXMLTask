@@ -16,4 +16,12 @@ public class SyntheticGem extends Gem {
         this.manufacturer = manufacturer;
     }
     
+    @Override
+    public String toString() {
+        StringBuilder gemString = new StringBuilder(super.toString());
+        gemString.setLength(gemString.length() - 1);
+        gemString.append("Manufacturer: ").append(getManufacturer()).append("\n}");
+       return gemString.toString();
+    }
+
 }
