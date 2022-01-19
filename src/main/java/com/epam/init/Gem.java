@@ -69,5 +69,20 @@ public class Gem {
 
         return gemString.toString();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Gem gem = (Gem)obj;
+        return(id.equals(gem.getId()) && hallmark.equals(gem.getHallmark()) &&
+         name.equals(gem.getName()) && Float.compare(value,gem.getValue()) == 0 && visualParametrs.equals(gem.getVisualParametrs()));
+
+    }
     
 }

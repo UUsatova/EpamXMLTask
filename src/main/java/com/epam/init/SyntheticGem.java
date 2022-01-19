@@ -24,4 +24,9 @@ public class SyntheticGem extends Gem {
        return gemString.toString();
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return (super.equals(obj) && ((SyntheticGem)obj).manufacturer.equals(manufacturer));
+    }
+
 }

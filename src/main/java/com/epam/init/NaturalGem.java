@@ -25,5 +25,10 @@ public class NaturalGem extends Gem {
         gemString.append("Origin: ").append(getOrigin()).append("\n}");
        return gemString.toString();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return (super.equals(obj) && ((NaturalGem)obj).getOrigin().equals(origin) );
+    }
     
 }

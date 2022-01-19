@@ -32,14 +32,6 @@ public class SaxParser implements Parser {
         return gems;
     }
 
-    public static void main(String args[]) throws IOException, SAXException, ParserConfigurationException {
-
-        SaxParser saxParser = new SaxParser();
-       List<Gem> h =  saxParser.parse("src/test/java/com/epam/resourses/Gems.xml");
-       System.out.println(h.toString());
-       
-
-
-    }
+    
     
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Gems   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.epam.com/gems"
+      xsi:schemaLocation="http://www.epam.com/gems gems.xsd">
+    <NaturalGem id="id-1t67" hallmark="123">
+        <name>gem1</name>
+        <value>34.4</value>
+        <visualParameters>
+            <colour>blue</colour>
+            <transparency>low</transparency>
+            <typeOfCut>6</typeOfCut>
+        </visualParameters>
+        <origin>veryogigin</origin>
+    </NaturalGem>
+   
+    <SyntheticGem id="id-k3">
+        <name>hhhhhhh</name>
+        <value>78.8</value>
+        <visualParameters>
+            <colour>goopy</colour>
+            <transparency>high</transparency>
+            <typeOfCut>7</typeOfCut>
+            </visualParameters>
+        <manufacturer>perdak</manufacturer>
+    </SyntheticGem>
+
+</Gems>

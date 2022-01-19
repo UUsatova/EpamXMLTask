@@ -38,5 +38,19 @@ public class VisualParametrs {
     public void setTypeOfCut(Integer typeOfCut) {
         this.typeOfCut = typeOfCut;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        VisualParametrs vParametrs = (VisualParametrs)obj;
+        return (colour.equals(vParametrs.getColour()) &&
+                transparency.equals(vParametrs.getTransparency()) &&
+                typeOfCut.equals(vParametrs.getTypeOfCut()));
+    }
     
 }
