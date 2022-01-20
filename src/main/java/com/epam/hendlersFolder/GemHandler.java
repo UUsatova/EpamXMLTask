@@ -28,9 +28,9 @@ public class GemHandler extends DefaultHandler {
     }
 
     @Override
-    public void startElement(String uri, String localName,String qName, Attributes attributes){
+    public void startElement(String uri, String localName,String tegName, Attributes attributes){
         for(CommonGemEnum item : CommonGemEnum.values() ){
-            if(qName.equals(item.getValue())){
+            if(item.getValue().equals(tegName)){
                 currentTeg = item;
                 if(item.equals(CommonGemEnum.GEM)){
                     currGem = new Gem(attributes.getValue(0), getHallmark(attributes));
@@ -50,8 +50,8 @@ public class GemHandler extends DefaultHandler {
     }
 
     @Override
-    public void characters(char[] ch, int start, int length){
-        String data = String.copyValueOf(ch,start,length).trim();
+    public void characters(char[] allDataFromXML, int startOfCurrentContext, int lengthOfCurrentContext){
+        String data = String.copyValueOf(allDataFromXML,startOfCurrentContext,lengthOfCurrentContext).trim();
         if(currentTeg  == CommonGemEnum.NAME){
             if((currGem.getName()) == (null)) {
                 currGem.setName(data);
@@ -98,10 +98,10 @@ public class GemHandler extends DefaultHandler {
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName){
-        if(qName.equals(CommonGemEnum.GEM.getValue()) || 
-           qName.equals(CommonGemEnum.NATURAL_GEM.getValue()) || 
-           qName.equals(CommonGemEnum.SYNTHETIC_GEM.getValue()) ){
+    public void endElement(String uri, String localName, String tagName){
+        if(CommonGemEnum.GEM.getValue().equals(tagName) || 
+        CommonGemEnum.NATURAL_GEM.getValue().equals(tagName) || 
+        CommonGemEnum.SYNTHETIC_GEM.getValue().equals(tagName) ){
             gems.add(currGem);
         }
         
