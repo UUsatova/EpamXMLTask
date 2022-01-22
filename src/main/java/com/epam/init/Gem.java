@@ -8,9 +8,19 @@ public class Gem {
     private VisualParametrs visualParametrs ;
     private Float value;
 
+    public Gem(){}
+
     public Gem(String id,Integer hallmark ) {
         this.id = id;
         this.hallmark = hallmark;
+    }
+
+    public Gem(String id,Integer hallmark ,String name,VisualParametrs visualParametrs,Float value){
+        this.id = id;
+        this.hallmark = hallmark;
+        this.name = name;
+        this.visualParametrs = visualParametrs;
+        this.value = value;
     }
 
 

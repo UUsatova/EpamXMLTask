@@ -4,9 +4,16 @@ public class SyntheticGem extends Gem {
 
     private String manufacturer ;
 
+    public SyntheticGem(){}
+
     public SyntheticGem(String id, Integer hallmark) {
         super(id, hallmark);
         
+    }
+
+    public SyntheticGem(String id,Integer hallmark ,String name,VisualParametrs visualParametrs,Float value,String manufacturer ){
+        super(id, hallmark, name, visualParametrs, value);
+        this.manufacturer = manufacturer;
     }
 
     public String getManufacturer() {

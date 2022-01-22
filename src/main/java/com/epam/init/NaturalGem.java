@@ -4,9 +4,16 @@ public class NaturalGem extends Gem {
 
     private String origin;
 
+    public NaturalGem(){}
+
     public NaturalGem(String id, Integer hallmark) {
         super(id, hallmark);
         
+    }
+
+    public NaturalGem(String id,Integer hallmark ,String name,VisualParametrs visualParametrs,Float value,String origin){
+        super(id, hallmark, name, visualParametrs, value);
+        this.origin = origin;
     }
 
 
