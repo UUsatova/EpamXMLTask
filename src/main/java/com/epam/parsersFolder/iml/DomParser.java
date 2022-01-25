@@ -9,6 +9,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import com.epam.exeption.ParserCustomExeption;
 import com.epam.init.CommonGemEnum;
 import com.epam.init.Gem;
 import com.epam.init.NaturalGem;
@@ -126,7 +127,7 @@ public class DomParser implements Parser {
 
 
     @Override
-    public List<Gem> parse(String fileName) throws ParserConfigurationException {
+    public List<Gem> parse(String fileName) throws ParserCustomExeption {
         try{
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -135,7 +136,7 @@ public class DomParser implements Parser {
         NodeList nodeList = root.getChildNodes();
         return createListOfGems(nodeList);
         }catch(ParserConfigurationException | SAXException | IOException e ){
-            throw new ParserConfigurationException();
+            throw new ParserCustomExeption();
         }
         
     }

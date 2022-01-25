@@ -1,7 +1,17 @@
 package com.epam.init;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "SyntheticGem", propOrder = {"manufacturer"})
 public class SyntheticGem extends Gem {
 
+    @XmlElement (namespace="http://www.epam.com/gems", required = true)
     private String manufacturer ;
 
     public SyntheticGem(){}
@@ -19,6 +29,8 @@ public class SyntheticGem extends Gem {
     public String getManufacturer() {
         return manufacturer;
     }
+
+    
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }

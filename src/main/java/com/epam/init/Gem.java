@@ -1,11 +1,40 @@
 package com.epam.init;
 
+import javax.print.attribute.standard.MediaSize.NA;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Gem",  propOrder = { "id", "hallmark" ,"name", "value", "visualParametrs"} )
+//@XmlRootElement( name = "Gem", namespace="http://www.epam.com/gems" )
+@XmlSeeAlso({NaturalGem.class, SyntheticGem.class})
+
 public class Gem {
+
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+
+    
+    @XmlAttribute( name = "id", required = true )
     private String id;
+    @XmlAttribute( name = "hallmark", required = false )
     private Integer hallmark = 0;
 
+    @XmlElement (namespace="http://www.epam.com/gems", required = true)
     private String name;
-    private VisualParametrs visualParametrs ;
+    @XmlElement (namespace="http://www.epam.com/gems", required = true)
+    private VisualParametrs visualParametrs = new VisualParametrs() ;
+    @XmlElement (namespace="http://www.epam.com/gems", required = true)
     private Float value;
 
     public Gem(){}
@@ -38,11 +67,11 @@ public class Gem {
     public VisualParametrs getVisualParametrs() {
         return visualParametrs;
     }
-
+    
     public void setId(String id) {
         this.id = id;
     }
-
+   
     public void setHallmark(Integer hallmark) {
         this.hallmark = hallmark;
     }
@@ -50,11 +79,9 @@ public class Gem {
     public void setName(String name) {
         this.name = name;
     }
-   
     public void setVisualParametrs(VisualParametrs visualParametrs) {
         this.visualParametrs = visualParametrs;
     }
-
     public void setValue(Float value) {
         this.value = value;
     }

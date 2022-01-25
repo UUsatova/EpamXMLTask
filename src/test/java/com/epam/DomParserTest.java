@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import com.epam.exeption.ParserCustomExeption;
 import com.epam.init.Gem;
 import com.epam.init.NaturalGem;
 import com.epam.init.SyntheticGem;
@@ -21,7 +22,7 @@ public class DomParserTest {
     private String fileName = "src/test/java/com/epam/resourses/GemsOneMore.xml";
 
     @Test
-    public void parseTestShouldReturnListOfGems() throws ParserConfigurationException{
+    public void parseTestShouldReturnListOfGems() throws  ParserCustomExeption{
         //given
         List<Gem> expected = new ArrayList<>();
         NaturalGem nGem = new NaturalGem("id-1t67", 123);
